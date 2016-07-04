@@ -21,6 +21,7 @@ class TagPage(VirtualSourceObject):
         VirtualSourceObject.__init__(self, parent)
         self.plugin = parent.pad.env.plugins['tags']
         self.tag = tag
+        self._pad_backup = self.pad
 
     @property
     def items(self):
